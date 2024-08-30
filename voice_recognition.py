@@ -23,10 +23,17 @@ while True:
     if inp == "stop listening":
         print("Goodbye!")
         break
-    elif "browser" in inp:  
+    elif "browser" in inp:  # browsing website using voice command 'browser' 
         inp = inp.replace('browser ', '')
         webbrowser.open("http://" + inp)
         continue
+    elif "search" in inp: #google something using voice command 'search'
+        inp = inp.replace('search ', '')
+        webbrowser.open("http://google.com/search?q="+inp)
+        continue
+
+
+
 
 '''
 print('Python is listening...')
